@@ -424,7 +424,6 @@ body {
 
 .portfolio-item {
     flex-grow: 1;
-	width: calc(33% - 30px);
     transition: box-shadow 250ms ease-in-out;
 }
 
@@ -504,7 +503,6 @@ body {
 
 .clients-item {
     flex-grow: 1;
-    width: calc(16.6% - 30px);   
 }
 
 .clients-link {
