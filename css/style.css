@@ -532,6 +532,10 @@ body {
     background-color:  #2F303A;
 }
 
+.footer .container {
+    display: flex;
+}
+
 .footer-box {
     display: flex;
     gap: 70px;
@@ -575,6 +579,7 @@ body {
 }
 
 .address-list__item { margin-bottom: 9px; }
+.address-list__item:last-of-type { margin-bottom: 0; }
 
 .address-list__link {
     font-size: 14px;
