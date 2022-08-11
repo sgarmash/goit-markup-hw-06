@@ -583,6 +583,10 @@ body {
     outline-style: none;
 }
 
+.address {
+    font-style: normal;
+}
+
 .address-description {
     margin-bottom: 9px;
     font-size: 14px;
