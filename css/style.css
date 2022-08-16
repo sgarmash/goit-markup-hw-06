@@ -132,16 +132,19 @@ body {
 }
 
 .header-menu__link:hover::after,
-.header-menu__link:focus::after,
-.header-menu__link:focus-visible::after {
+.header-menu__link:focus::after {
+    transform: scaleY(1);
+}
+
+.header-menu__link.is-active,
+.header-menu__link.is-active::after {
+    color: var(--color-blue);
     transform: scaleY(1);
 }
 
 .header-menu__link:hover,
-.header-menu__link:focus,
-.header-menu__link:focus-visible { 
+.header-menu__link:focus { 
     color: var(--color-blue);
-    outline: none;
 }
 
 .header-contact {
@@ -183,7 +186,6 @@ body {
 .header-contact__link:focus,
 .header-contact__link:focus-visible { 
     color: var(--color-blue);
-    outline: none; 
 }
 
 .header-contact__link:hover .header-contact__icon,
@@ -240,11 +242,10 @@ body {
 }
 
 .tabs-item__button:hover,
-.tabs-item__button:focus-visible {
+.tabs-item__button:focus {
     color: var(--color-white);
     background-color: var(--color-blue);
     box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
-    outline: none;
 }
 
 .features {padding-top: 94px;}
@@ -423,15 +424,12 @@ body {
 }
 
 .list-team .social-link:hover,
-.list-team .social-link:focus,
-.list-team .social-link:focus-visible {
+.list-team .social-link:focus {
     background-color: var(--color-blue);
-    outline-style: none;
 }
 
 .list-team .social-link:hover .social-icon,
-.list-team .social-link:focus .social-icon,
-.list-team .social-link:focus-visible .social-icon {
+.list-team .social-link:focus .social-icon {
     fill: var(--color-white);
 }
 
@@ -533,11 +531,9 @@ body {
 }
 
  .clients-link:hover,
- .clients-link:focus,
- .clients-link:focus-visible {
+ .clients-link:focus {
     border: 1px solid var(--color-blue);
     fill: var(--color-blue);
-    outline-style: none;
 }
 
 /* Styles for the footer element */
@@ -579,10 +575,8 @@ body {
 }
 
 .footer-item .social-link:hover,
-.footer-item .social-link:focus,
-.footer-item .social-link:focus-visible {
+.footer-item .social-link:focus {
     background-color: var(--color-blue);
-    outline-style: none;
 }
 
 .address {
@@ -744,7 +738,6 @@ body {
 .register-label:focus-within .register-comment {
     border: 1px solid var(--color-blue);
     border-radius: 4px;
-    outline-style: none;
 }
 
 .register-label:focus-within .register-icon {
