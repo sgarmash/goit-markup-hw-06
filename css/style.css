@@ -1,16 +1,11 @@
 /* Basic style reset */
-
-a { text-decoration: none; }
-
-ul, ol { 
+.link {text-decoration: none;}
+.list {
     margin: 0;
-    padding: 0;  
+    padding: 0;
+    list-style: none;  
 }
 
-ul li,
-ol li {
-    list-style: none;
-}
 
 h1, 
 h2, 
@@ -28,6 +23,13 @@ button {
     cursor: pointer;
 }
 
+.thumbnail {
+    max-width: 100%;
+    height: auto;
+    vertical-align: middle;
+}
+
+
 /* Custom properties */
 
 :root {
@@ -38,6 +40,7 @@ button {
     --color-white-smoke: #F5F5F5;
     --color-white-solid: #F5F4FA;
     --color-blue: #2196F3;
+    --persian-blue: #188CE8;
     --color-bright-gray: #ECECEC;
     --color-solid-green: #AFB1B8;
     --color-silver-sand:#C4C4C4;
@@ -150,11 +153,10 @@ body {
 
 .header-contact__item {
     display: inline-flex;
-    margin-left: 50px;
 }
 
 
-.header-portfolio .header-contact__item {
+.header-contact__item {
     margin-left: 30px;
 }
 
@@ -245,35 +247,32 @@ body {
     outline: none;
 }
 
+.features {padding-top: 94px;}
+
 /* Styles for the banner section element */
 
 .banner {
-    position: relative;
+    max-width: 1600px;
+    margin: 0 auto;
+    height: 600px;
+    background-color: var(--color-silver-sand);
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url('../images/banner-image.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.banner .container {
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    height: 600px;
-    background-color: var(--color-silver-sand);
-    background-image: url('../images/banner-image.jpg');
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-
-.banner::before {
-    content: '';
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 100%;
     height: 100%;
-    background-color: rgba(47, 48, 58, 0.4);
-    z-index: 1;
 }
 
 .banner-title {
-    position: relative;
-    max-width: 40%;
+    width: 696px;
+    margin: 0 auto;
     margin-bottom: 30px;
     font-weight: 900;
     font-size: 44px;
@@ -282,7 +281,6 @@ body {
     letter-spacing: 0.06em;
     text-transform: uppercase;
     color: var(--color-white);
-    z-index: 2;
 }
 
 .order-service {
@@ -295,16 +293,24 @@ body {
     color: var(--color-white);
     background-color: var(--color-blue);
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-    border-radius: 4px;
-    z-index: 2;
+    transition: background-color ease-in-out 250ms;
+}
+
+.order-service:hover,
+.order-service:focus {
+    background-color: var(--persian-blue);
 }
 
 /* Styles for the About us section element */
 
 .about-us__list {
     display: flex;
-    margin-bottom: 94px;
-    gap: 50px;
+    gap: 30px;
+}
+
+.about-us__item {
+    flex-grow: 1;
+    width: calc(25% - 30px);
 }
 
 .about-us__item-box {
@@ -331,6 +337,7 @@ body {
 .about-us__paragraph {
     font-size: 14px;
     line-height: 1.71;
+    letter-spacing: 0.03em;
     color: var(--color-silver);
 }
 
@@ -339,7 +346,7 @@ body {
 .services-title {
     position: absolute;
     left: 0;
-    bottom: 3px;
+    bottom: 0;
     width: 100%;
     padding: 27px 0;
     font-size: 14px;
@@ -362,8 +369,9 @@ body {
     border-radius: 0px 0px 4px 4px;
 }
 
-.list-team__image {
-    margin-bottom: 30px;
+.list-team__content {
+    padding-top: 30px;
+    padding-bottom: 30px;
 }
 
 .list-team__title {
@@ -376,18 +384,12 @@ body {
 }
 
 .list-team__description {
-    margin-bottom: 16px; 
-    font-style: normal;
+    margin-bottom: 16px;
     font-size: 16px;
     line-height: 1.187;
     text-align: center;
     letter-spacing: 0.03em;
     color: var(--color-silver);
-}
-
-
-.list-team .social-list {
-    margin-bottom: 30px;
 }
 
 .social-item {
@@ -609,7 +611,7 @@ body {
 
 .subscribe-form {
     display: flex;
-    gap: 40px;
+    gap: 12px;
 }
 
 .subscribe-title {
