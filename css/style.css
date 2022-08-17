@@ -341,7 +341,7 @@ body {
     color: var(--color-silver);
 }
 
-.services-item { position: relative; }
+.service-list__item { position: relative; }
 
 .services-title {
     position: absolute;
