@@ -86,7 +86,11 @@ body {
     color: var(--color-black);
 }
 
-.logo span { color: var(--color-blue); }
+.logo__text--blue { color: var(--color-blue); }
+
+.header .logo {
+    padding: 24px 0;
+}
 
 /* Styles for the header element */
 
@@ -173,6 +177,7 @@ body {
 .header-contact__link {
     display: inline-flex;
     align-items: center;
+    padding: 32px 0;
     font-weight: 500;
     font-size: 14px;
     line-height: 0.875;
@@ -242,7 +247,7 @@ body {
     box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 
-.features {padding-top: 94px;}
+.service {padding-bottom: 94px;}
 
 /* Styles for the banner section element */
 
@@ -595,6 +600,11 @@ body {
     color: rgba(255, 255, 255, 0.6);
 }
 
+.address-list__link:hover,
+.address-list__link:focus {
+    color: var(--color-blue);
+}
+
 .subscribe { margin-left: auto; }
 
 .subscribe-form {
@@ -640,6 +650,12 @@ body {
     background: var(--color-blue);
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
     border-radius: 4px;
+    transition: background-color ease-in-out 250ms;
+}
+
+.subscribe-submit:hover,
+.subscribe-submit:focus {
+    background-color: var(--persian-blue);
 }
 
 .subscribe-icon {
@@ -851,4 +867,10 @@ body {
     background-color: var(--color-blue);
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
     border-radius: 4px;
+    transition: background-color ease-in-out 250ms;
+}
+
+.register-submit:hover,
+.register-submit:focus {
+    background-color: var(--persian-blue);
 }
