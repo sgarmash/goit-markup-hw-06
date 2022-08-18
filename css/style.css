@@ -526,6 +526,7 @@ body {
     border-radius: 4px;
     border: 1px solid var(--color-solid-green);
     fill: var(--color-solid-green);
+    outline: transparent;
     transition: border 250ms ease-in-out, fill 250ms ease-in-out;
 }
 
@@ -741,7 +742,14 @@ body {
     display: flex;
     flex-direction: column;
     margin-bottom: 28px;
-    
+}
+
+.register-input,
+.register-comment,
+.register-input,
+.register-comment,
+.subscribe-input {
+    outline: transparent;
 }
 
 .register-label:focus-within .register-input,
