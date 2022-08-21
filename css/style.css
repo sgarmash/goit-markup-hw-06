@@ -125,7 +125,7 @@ body {
 .header-menu__link::after {
     content: '';
     position: absolute;
-    bottom: 0;
+    top: calc(100% - 1px);
     left: 0;
     width: 100%;
     height: 4px;
@@ -348,7 +348,10 @@ body {
     left: 0;
     bottom: 0;
     width: 100%;
-    padding: 27px 0;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     font-size: 14px;
     line-height: 1.14;
     text-align: center;
@@ -439,10 +442,6 @@ body {
     transition: box-shadow 250ms ease-in-out;
 }
 
-.portfolio-list__image {
-    display: block;
-}
-
  
 .portfolio-item__name {
     margin-bottom: 4px;
@@ -497,9 +496,19 @@ body {
     color: var(--color-white);
 }
 
-.portfolio-item:hover { box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16); }
+.portfolio-link:hover,
+.portfolio-link:focus {
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16); 
+    outline: transparent; 
+}
 
-.portfolio-item:hover .portfolio-item__box-inner {
+.portfolio-link {
+    display: inline-block;
+    transition: box-shadow 250ms ease-in-out;
+}
+
+.portfolio-link:hover .portfolio-item__box-inner,
+.portfolio-link:focus .portfolio-item__box-inner {
     height: 100%;
     transform: translateY(0);
     visibility: visible;
@@ -553,9 +562,8 @@ body {
 }
 
 .footer-title {
-    margin-top: 12px;
+    display: inline-block;
     margin-bottom: 20px;
-    font-weight: 700;
     font-size: 14px;
     line-height: 1.14;
     letter-spacing: 0.03em;
@@ -614,7 +622,7 @@ body {
 }
 
 .subscribe-title {
-    margin-top: 12px;
+    display: inline-block;
     margin-bottom: 20px;
     font-size: 14px;
     line-height: 1.14;
@@ -672,17 +680,14 @@ body {
     top: 0;
     width: 100%;
     height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
     background-color: rgba(0, 0, 0, 0.2);
     transition: opacity 250ms ease-in-out, visibility 250ms ease-in-out;
     z-index: 100;
 }
 
-.modal.is-hidden .modal-content { transform: scale(0.7); }
+.modal.is-hidden .modal-content { transform: translate(-50%, -50%) scale(0.7); }
 
-.modal:not(.is-hidden) .modal-content { transform: scale(1); }
+.modal:not(.is-hidden) .modal-content { transform: translate(-50%, -50%) scale(1); }
 
 .modal.is-hidden {
     opacity: 0;
@@ -696,6 +701,9 @@ body {
 }
 
 .modal-content {
+    position: absolute;
+    left: 50%;
+    top: 50%;
     width: 528px;
     background-color: var(--color-white);
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
