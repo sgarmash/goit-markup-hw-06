@@ -253,7 +253,7 @@ body {
 .banner {
     max-width: 1600px;
     margin: 0 auto;
-    height: 600px;
+    padding: 200px 0;
     background-color: var(--color-silver-sand);
     background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url('../images/banner-image.jpg');
     background-repeat: no-repeat;
@@ -883,7 +883,18 @@ body {
 }
 
 .privacy-policy-link {
+    position: relative;
     color: var(--color-blue);
+}
+
+.privacy-policy-link::after {
+    content: "";
+    position: absolute;
+    left: -4px ;
+    bottom: 0;
+    width: 100%;
+    height: .1px;
+    background-color: var(--color-blue);
 }
 
 .register-submit {
