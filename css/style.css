@@ -119,7 +119,7 @@ body {
     line-height: 0.875;
     letter-spacing: 0.02em;
     color: var(--color-dark-green);
-    transition: color 250ms ease-in-out;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .header-menu__link::after {
@@ -132,7 +132,7 @@ body {
     background-color: #2196F3;
     border-radius: 2px;
     transform: scaleY(0);
-    transition: transform 250ms ease-in-out;
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .header-menu__link:hover::after,
@@ -183,13 +183,12 @@ body {
     line-height: 0.875;
     letter-spacing: 0.02em;
     color: var(--color-silver);
-    fill: var(--color-silver);
-    transition: color 250ms ease-in-out, fill 250ms ease-in-out;
+    fill: currentColor;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.header-contact__link:hover ,
-.header-contact__link:focus,
-.header-contact__link:focus-visible { 
+.header-contact__link:hover,
+.header-contact__link:focus { 
     color: var(--color-blue);
 }
 
@@ -237,7 +236,7 @@ body {
     color: var(--color-dark-green);
     background-color: var(--color-white-solid);
     border-radius: 4px;
-    transition: background-color 250ms ease-in-out, color 250ms ease-in-out, box-shadow 250ms ease-in-out;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), color 250ms cubic-bezier(0.4, 0, 0.2, 1), box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .tabs-item__button:hover,
@@ -293,7 +292,7 @@ body {
     color: var(--color-white);
     background-color: var(--color-blue);
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-    transition: background-color ease-in-out 250ms;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .order-service:hover,
@@ -407,12 +406,12 @@ body {
 }
 
 .list-team .social-link {
-    transition: background-color ease-in-out 250ms;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .list-team .social-link .social-icon {
     fill: var(--color-solid-green);
-    transition: fill ease-in-out 250ms;
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 
@@ -439,7 +438,7 @@ body {
 
 .portfolio-item {
     flex-grow: 1;
-    transition: box-shadow 250ms ease-in-out;
+    transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
  
@@ -485,7 +484,7 @@ body {
     transform-origin: bottom;
     visibility: hidden;
     opacity: 0;
-    transition: height 250ms ease-in-out, transform 250ms ease-in-out, visibility 250ms ease-in-out, opacity 250ms ease-in-out;
+    transition: height 250ms cubic-bezier(0.4, 0, 0.2, 1), transform 250ms cubic-bezier(0.4, 0, 0.2, 1), visibility 250ms cubic-bezier(0.4, 0, 0.2, 1), opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
     z-index: 1;
 }
 
@@ -504,7 +503,7 @@ body {
 
 .portfolio-link {
     display: inline-block;
-    transition: box-shadow 250ms ease-in-out;
+    transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .portfolio-link:hover .portfolio-item__box-inner,
@@ -536,7 +535,7 @@ body {
     border: 1px solid var(--color-solid-green);
     fill: var(--color-solid-green);
     outline: transparent;
-    transition: border 250ms ease-in-out, fill 250ms ease-in-out;
+    transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1), fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
  .clients-link:hover,
@@ -562,10 +561,10 @@ body {
 }
 
 .footer-title {
-    display: inline-block;
     margin-bottom: 20px;
     font-size: 14px;
     line-height: 1.14;
+    font-weight: 700;
     letter-spacing: 0.03em;
     text-transform: uppercase;
     color: var(--color-white);
@@ -579,7 +578,7 @@ body {
 .footer-item .social-link {
     fill: var(--color-white);
     background-color: rgba(255, 255, 255, 0.1);
-    transition: background-color 250ms ease-in-out, fill 250ms ease-in-out;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .footer-item .social-link:hover,
@@ -607,6 +606,7 @@ body {
     line-height: 1.714;
     letter-spacing: 0.03em;
     color: rgba(255, 255, 255, 0.6);
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .address-list__link:hover,
@@ -622,10 +622,10 @@ body {
 }
 
 .subscribe-title {
-    display: inline-block;
     margin-bottom: 20px;
     font-size: 14px;
     line-height: 1.14;
+    font-weight: 700;
     letter-spacing: 0.03em;
     text-transform: uppercase;
     color: var(--color-white);
@@ -645,6 +645,11 @@ body {
     border: 1px solid rgba(255, 255, 255, 0.3);
     border-radius: 4px;
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+    transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.subscribe-input:focus {
+    border: 1px solid var(--color-blue);
 }
 
 .subscribe-submit {
@@ -659,7 +664,7 @@ body {
     background: var(--color-blue);
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
     border-radius: 4px;
-    transition: background-color ease-in-out 250ms;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .subscribe-submit:hover,
@@ -674,60 +679,58 @@ body {
 
 /* Styled for Modal */
 
-.modal {
+.backdrop {
     position: fixed;
     left: 0;
     top: 0;
     width: 100%;
     height: 100%;
     background-color: rgba(0, 0, 0, 0.2);
-    transition: opacity 250ms ease-in-out, visibility 250ms ease-in-out;
+    opacity: 1;
+    visibility: visible;
+    transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
     z-index: 100;
 }
 
-.modal.is-hidden .modal-content { transform: translate(-50%, -50%) scale(0.7); }
 
-.modal:not(.is-hidden) .modal-content { transform: translate(-50%, -50%) scale(1); }
+.backdrop .backdrop-content { transform: translate(-50%, -50%); }
 
-.modal.is-hidden {
+.backdrop.is-hidden {
     opacity: 0;
     visibility: hidden;
     pointer-events: none;
 }
 
-.modal:not(.is-hidden) {
-    width: 100%;
-    height: 100%;
-}
-
-.modal-content {
+.backdrop-content {
     position: absolute;
     left: 50%;
     top: 50%;
     width: 528px;
+    padding: 40px;  
     background-color: var(--color-white);
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
     border-radius: 4px;
-    transition: transform ease-in-out 250ms;
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.modal-close {
+.backdrop-close {
+    position: absolute;
+    right: 8px;
+    top: 8px;
     display: flex;
     align-items: center;
     justify-content: center;
     width: 30px;
     height: 30px;
-    margin-left: auto;
-    margin-right: 8px;
-    margin-top: 8px;
     border-radius: 50%;
     background-color: var(--color-white);
     border: 1px solid rgba(0, 0, 0, 0.1);
     fill: var(--color-black);
-    transition: fill 250ms ease-in-out;
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.modal-close:hover {
+.backdrop-close:hover,
+.backdrop-close:focus {
     fill: var(--color-blue);
 }
 
@@ -735,21 +738,28 @@ body {
 
 .register-form { text-align: center; }
 
-.register-title {
+.register-item {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+}
+
+.register-item.register-item__comment {
+    margin-bottom: 20px;
+}
+
+.register-item.register-item__privacy {
     margin-bottom: 30px;
+}
+
+.backdrop-title {
+    margin-bottom: 12px;
     font-weight: 700;
     font-size: 20px;
     line-height: 1.15;
     text-align: center;
     letter-spacing: 0.03em;
     color: var(--color-dark-green);
-}
-
-.register-label {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    margin-bottom: 28px;
 }
 
 .register-input,
@@ -760,20 +770,18 @@ body {
     outline: transparent;
 }
 
-.register-label:focus-within .register-input,
-.register-label:focus-within .register-comment {
+.register-input:focus,
+.register-area:focus {
     border: 1px solid var(--color-blue);
-    border-radius: 4px;
 }
 
-.register-label:focus-within .register-icon {
+.register-input:focus + .register-icon {
     fill: var(--color-blue);
 }
 
-.label-text {
-    position: absolute;
-    top: -14px;
-    left: 0;
+.register-label {
+    margin-bottom: 4px;
+    text-align: left;
     font-size: 12px;
     line-height: 1.16;
     letter-spacing: 0.01em;
@@ -781,13 +789,18 @@ body {
 }
 
 .register-input {
+    width: 100%;
     height: 40px;
     padding: 12px 0 12px 42px;
     font-size: 12px;
     color: rgba(117, 117, 117, 0.5);
     border: 1px solid rgba(33, 33, 33, 0.2);
     border-radius: 4px;
-    transition: border 250ms ease-in-out;
+    transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.register-field {
+    position: relative;
 }
 
 .register-icon {
@@ -795,10 +808,11 @@ body {
     left: 15px;
     top: 50%;
     transform: translate(0, -50%);
-    transition: fill 250ms ease-in-out;
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.register-comment {
+.register-area {
+    width: 100%;
     height: 120px;
     padding: 12px 16px;
     font-size: 12px;
@@ -808,11 +822,10 @@ body {
     border: 1px solid rgba(33, 33, 33, 0.2);
     border-radius: 4px;
     resize: none;
+    outline: transparent;
 }
 
-.register-label-comment {margin-bottom: 20px;}
-
-.register-comment::placeholder {
+.register-area::placeholder {
     font-size: 12px;
     line-height: 1.16;
     letter-spacing: 0.01em;
@@ -822,7 +835,7 @@ body {
 .privacy-policy {
     display: inline-flex;
     align-items: center;
-    margin-bottom: 30px;
+    justify-content: center;
 }
 
 .privacy-policy-text {
@@ -850,12 +863,18 @@ body {
     opacity: 0;
 }
 
+.register-checked:focus + .checked-icon  {
+    outline: 1px solid var(--color-dark-green);
+}
+
 .checked-icon { 
     display: inline-block;
-    width: 100%;
-    height: 100%;
+    width: 16px;
+    height: 15px;
     background-image: url('../images/checkbox-default.svg');
-    background-repeat: no-repeat;  
+    background-repeat: no-repeat;
+    outline: 1px solid transparent;
+    transition: outline 250ms cubic-bezier(0.4, 0, 0.2, 1);  
 }
 
 .register-checked:checked + .checked-icon {
@@ -865,14 +884,12 @@ body {
 
 .privacy-policy-link {
     color: var(--color-blue);
-    text-decoration: underline;
 }
 
 .register-submit {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    margin-bottom: 40px;
     width: 200px;
     height: 50px;
     font-weight: 700;
@@ -883,7 +900,7 @@ body {
     background-color: var(--color-blue);
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
     border-radius: 4px;
-    transition: background-color ease-in-out 250ms;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .register-submit:hover,
